@@ -6,7 +6,7 @@
 // WHEN I click on the GitHub username
 // THEN that GitHub profile opens in a new tab
 // WHEN I start the application
-// THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+
 // WHEN I enter the team manager’s name, employee ID, email address, and office number
 // THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
 // WHEN I select the engineer option
@@ -21,10 +21,15 @@ const inquirer = require('inquirer');
 const generatePage = require('./src/generatePage');
 
 //team
-const manager = require('./lib/manager');
-const engineer = requrie('./lib/engineer');
-const intern = require('./lib/intern')
-const employees = [];
+const Manager = require('./lib/Manager');
+const Engineer = requrie('./lib/engineer');
+const Intern = require('./lib/Intern')
+const Employee = require('./lib/Employee')
+// const Employee = [];
+
+
+
+
 
 const writeFile = (data) => {
     return new Promise((resolve, reject) => {
