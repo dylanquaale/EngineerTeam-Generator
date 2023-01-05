@@ -27,10 +27,6 @@ const Intern = require('./lib/Intern')
 const Employee = require('./lib/Employee')
 // const Employee = [];
 
-
-
-
-
 const writeFile = (data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', data, err => {
