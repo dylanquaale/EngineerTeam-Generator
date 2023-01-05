@@ -18,4 +18,30 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-generator');
+const generatePage = require('./src/generatePage');
+
+//team
+const manager = require('./lib/manager');
+const engineer = requrie('./lib/engineer');
+const intern = require('./lib/intern')
+const employees = [];
+
+const writeFile = (data) => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/index.html', data, err => {
+            if(err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File Created'
+            });
+        });
+    });
+};
+
+
+
+
+// THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
