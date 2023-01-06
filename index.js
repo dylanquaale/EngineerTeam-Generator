@@ -16,16 +16,81 @@
 // WHEN I decide to finish building my team
 // THEN I exit the application, and the HTML is generated
 
-const fs = require('fs');
-const inquirer = require('inquirer');
-const generatePage = require('./src/generatePage');
+const fs = require("fs");
+const inquirer = require("inquirer");
+const generatePage = require("./src/generatePage");
 
 //team
-const Manager = require('./lib/Manager');
-const Engineer = requrie('./lib/engineer');
-const Intern = require('./lib/Intern')
-const Employee = require('./lib/Employee')
-// const Employee = [];
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/Intern");
+const mainMenu = () => {
+  inquirer
+    .prompt({
+      type: "list",
+      name: "task",
+      message: "select employee",
+      choices: ["manager", "engineer", "intern", "done"],
+    })
+    .then((answer) => {
+      if (answer.task === "manager") {
+        askManager();
+      }
+      if (answer.task === "engineer") {
+        askEngineer();
+      }
+      if (answer.task === "intern") {
+        askIntern();
+      }
+      if (answer.task === "done") {
+        console.log(employees)
+        writeFile(generatePage(employees))
+      }
+    });
+};
+const employees = [];
+
+const askManager = () => {
+  inquirer.prompt([
+    { type: "input", name: "name", message: "enter employee name" },
+    { type: "input", name: "id", message: "enter employee id" },
+    { type: "input", name: "email", message: "enter employee email" },
+    { type: "input", name: "officeNumber", message: "enter employee office number" },
+  ])
+  .then(answers => {
+    const manager = new Manager(answers.name, answers.id, answers.email,answers.officeNumber)
+    employees.push(manager)
+    mainMenu()
+  })
+};
+const askEngineer = () => {
+    inquirer.prompt([
+      { type: "input", name: "name", message: "enter employee name" },
+      { type: "input", name: "id", message: "enter employee id" },
+      { type: "input", name: "email", message: "enter employee email" },
+      { type: "input", name: "gitHub", message: "enter employee github" },
+    ])
+    .then(answers => {
+        const engineer = new Engineer(answers.name, answers.id, answers.email,answers.gitHub)
+        employees.push(engineer)
+        mainMenu()
+      })
+  };
+  const askIntern = () => {
+    inquirer.prompt([
+      { type: "input", name: "name", message: "enter employee name" },
+      { type: "input", name: "id", message: "enter employee id" },
+      { type: "input", name: "email", message: "enter employee email" },
+      { type: "input", name: "school", message: "enter employee school" },
+    ])
+    .then(answers => {
+        const intern = new Intern(answers.name, answers.id, answers.email,answers.school)
+        employees.push(intern)
+        mainMenu()
+      })
+  };
+
+  mainMenu()
 
 const writeFile = (data) => {
     return new Promise((resolve, reject) => {
@@ -41,8 +106,5 @@ const writeFile = (data) => {
         });
     });
 };
-
-
-
 
 // THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number

@@ -5,5 +5,27 @@
   },
   "devDependencies": {
     "jest": "^29.3.1"
-  }
+  },
+  "name": "engineerteam-generator",
+  "description": "![badge](https://img.shields.io/badge/license-MIT-lightblue.svg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanquaale/EngineerTeam-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanquaale/EngineerTeam-Generator/issues"
+  },
+  "homepage": "https://github.com/dylanquaale/EngineerTeam-Generator#readme"
 }
