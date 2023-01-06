@@ -30,19 +30,19 @@ const mainMenu = () => {
       type: "list",
       name: "task",
       message: "select employee",
-      choices: ["manager", "engineer", "intern", "done"],
+      choices: ["Manager", "Engineer", "Intern", "Done"],
     })
     .then((answer) => {
-      if (answer.task === "manager") {
+      if (answer.task === "Manager") {
         askManager();
       }
-      if (answer.task === "engineer") {
+      if (answer.task === "Engineer") {
         askEngineer();
       }
-      if (answer.task === "intern") {
+      if (answer.task === "Intern") {
         askIntern();
       }
-      if (answer.task === "done") {
+      if (answer.task === "Done") {
         console.log(employees)
         writeFile(generatePage(employees))
       }
@@ -52,39 +52,51 @@ const employees = [];
 
 const askManager = () => {
   inquirer.prompt([
-    { type: "input", name: "name", message: "enter employee name" },
-    { type: "input", name: "id", message: "enter employee id" },
-    { type: "input", name: "email", message: "enter employee email" },
-    { type: "input", name: "officeNumber", message: "enter employee office number" },
+    { type: "input", name: "name", message: "Enter employee name" },
+    { type: "input", name: "id", message: "Enter employee id" },
+    { type: "input", name: "email", message: "Enter employee email" },
+    { type: "input", name: "officeNumber", message: "Enter employee office number" },
   ])
   .then(answers => {
-    const manager = new Manager(answers.name, answers.id, answers.email,answers.officeNumber)
+    const manager = new Manager(
+            answers.name, 
+            answers.id, 
+            answers.email,
+            answers.officeNumber)
     employees.push(manager)
     mainMenu()
   })
 };
 const askEngineer = () => {
     inquirer.prompt([
-      { type: "input", name: "name", message: "enter employee name" },
-      { type: "input", name: "id", message: "enter employee id" },
-      { type: "input", name: "email", message: "enter employee email" },
-      { type: "input", name: "gitHub", message: "enter employee github" },
+      { type: "input", name: "name", message: "Enter employee name" },
+      { type: "input", name: "id", message: "Enter employee id" },
+      { type: "input", name: "email", message: "Enter employee email" },
+      { type: "input", name: "gitHub", message: "Enter employee github" },
     ])
     .then(answers => {
-        const engineer = new Engineer(answers.name, answers.id, answers.email,answers.gitHub)
+        const engineer = new Engineer(
+             answers.name,
+             answers.id, 
+             answers.email,
+             answers.gitHub)
         employees.push(engineer)
         mainMenu()
       })
   };
   const askIntern = () => {
     inquirer.prompt([
-      { type: "input", name: "name", message: "enter employee name" },
-      { type: "input", name: "id", message: "enter employee id" },
-      { type: "input", name: "email", message: "enter employee email" },
-      { type: "input", name: "school", message: "enter employee school" },
+      { type: "input", name: "name", message: "Enter employee name" },
+      { type: "input", name: "id", message: "Enter employee id" },
+      { type: "input", name: "email", message: "Enter employee email" },
+      { type: "input", name: "school", message: "Enter employee school" },
     ])
     .then(answers => {
-        const intern = new Intern(answers.name, answers.id, answers.email,answers.school)
+        const intern = new Intern(
+            answers.name, 
+            answers.id, 
+            answers.email,
+            answers.school)
         employees.push(intern)
         mainMenu()
       })

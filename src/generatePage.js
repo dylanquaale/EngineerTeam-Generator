@@ -1,6 +1,7 @@
 function insertCards(team){
     const html = []
     // use filter method to divide team into manager engineers and interns create one card for each person the array and push to html 
+    
 
     return html.join('')
 }

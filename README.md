@@ -30,6 +30,7 @@
   ## Questions
 
   ## Credits 
+Tutor Corey Yates
 https://github.com/TayHern/Team-Profile/blob/main/lib/Manager.js
 https://github.com/truethatplaya/10-the-team
 https://www.youtube.com/watch?v=03nmik6HOss
