@@ -88,9 +88,9 @@ const askEngineer = () => {
 
   mainMenu()
 // generate html
-const writeFile = (data) => {
+const writeFileSync = (data) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/index.html', data, err => {
+        fs.writeFileSync('./dist/index.html', data, err => {
             if(err) {
                 reject(err);
                 return;
