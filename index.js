@@ -91,7 +91,6 @@ const askEngineer = () => {
 const writeFileSync = (data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', data, err => {
-          console.log(data)
             if(err) {
                 reject(err);
                 return;
