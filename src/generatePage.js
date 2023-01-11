@@ -24,7 +24,7 @@ module.exports = function(team) {
         <div class="row">
             <h1 class="bg-primary col-12 text-center p-5 text-white">My Team</h1>
         </div>
-        ${insertCards(team)}
+        ${(team)}
      </div>
     
 </body>
