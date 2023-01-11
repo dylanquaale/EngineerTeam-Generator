@@ -26,7 +26,7 @@ const mainMenu = () => {
       }
       if (answer.task === "Done") {
         console.log(employees)
-        writeFile(generatePage(employees))
+        writeFileSync(generatePage(employees))
       }
     });
 };
@@ -90,7 +90,7 @@ const askEngineer = () => {
 // generate html
 const writeFileSync = (data) => {
     return new Promise((resolve, reject) => {
-        fs.writeFileSync('./dist/index.html', data, err => {
+        fs.writeFile('./dist/index.html', data, err => {
             if(err) {
                 reject(err);
                 return;
