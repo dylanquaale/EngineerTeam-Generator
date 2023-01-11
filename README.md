@@ -6,39 +6,39 @@
   
   ## Description
   You are able to generate a readme.md to any of your projects
-  - 
-  - 
+  - https://drive.google.com/file/d/1elXvJyFSt5jdx7RQYrGxH9rw68nb4vCe/view
+  - https://github.com/dylanquaale/EngineerTeam-Generator
   - 
   - 
   
   ## Table of Contents
   - [Installation](#installation)
+    npm i
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
+  Used to keep track of your team!
   
   ## Installation
-  
+  npm i
   ## Usage
- 
-  ## License
-
+  Used to keep track of your team!
+  
   ## Contributing
-
+  Go to my github page
+  Download the file
   ## Tests
- 
+  npm test
   ## Questions
-
+  Any questions should be directed to my email dylanquaale33@gmail.com
   ## Credits 
-Tutor Corey Yates
+Tutor Corey Yate
+ASK BCS: ocskier, https://app.slack.com/client/T0412JJM7PV/C04HX100N8P#:~:text=have%20been%20great-,salvarado,-APP
 https://github.com/TayHern/Team-Profile/blob/main/lib/Manager.js
 https://github.com/truethatplaya/10-the-team
+This is for the HTML where I got it from
+https://github.com/JamesLJenks/10_OOP-Team-Profile-Generator/blob/master/src/template.js
 https://www.youtube.com/watch?v=03nmik6HOss
 https://github.com/nicolewallace09/team-profile-generator
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 https://icons.getbootstrap.com/
 https://umn.bootcampcontent.com/University-of-Minnesota-Boot-Camp/UofM-VIRT-FSF-PT-10-2022-U-LOLC/-/tree/main/10-OOP/01-Activities/13-Ins_Pass-Tests
 https://umn.bootcampcontent.com/University-of-Minnesota-Boot-Camp/UofM-VIRT-FSF-PT-10-2022-U-LOLC/-/blob/main/10-OOP/01-Activities/24-Stu_Subclasses/Solved/boat.js
-
-
-  
