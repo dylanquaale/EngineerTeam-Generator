@@ -10,7 +10,8 @@
   - https://github.com/dylanquaale/EngineerTeam-Generator
   - 
   - 
-  
+  ![Screenshot 2023-01-11 at 5 58 59 PM](https://user-images.githubusercontent.com/93456860/211943845-658bef7d-64d0-4b10-8bf9-de3633e0152b.png)
+
   ## Table of Contents
   - [Installation](#installation)
     npm i
