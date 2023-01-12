@@ -31,8 +31,9 @@
   ## Questions
   Any questions should be directed to my email dylanquaale33@gmail.com
   ## Credits 
-Tutor Corey Yate
+Tutor Corey Yates
 ASK BCS: ocskier, https://app.slack.com/client/T0412JJM7PV/C04HX100N8P#:~:text=have%20been%20great-,salvarado,-APP
+@Krister Myrlønn worked together on pieces
 https://github.com/TayHern/Team-Profile/blob/main/lib/Manager.js
 https://github.com/truethatplaya/10-the-team
 This is for the HTML where I got it from
